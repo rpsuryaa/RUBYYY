@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="invoice.css">
+</head>
+<body>
+    <header class="header">
+        <div>
+           <h1>Invoice Generator</h1>
+        </div>
+    </header>
+    <center>
+    <section>
+        <h3>Details</h3>
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Name </label>
+                </td>
+                <td>
+                    <input type="text" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="date">Date </label>
+                </td>
+                <td>
+                    <input type="date" id="date">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="add">Address </label>
+                </td>
+                <td>
+                    <input type="text" id="add">
+                </td>
+            </tr>
+        </table>
+    </section>    
+    <section>
+        <h3>Items</h3>
+        <table>
+            <tr>
+                <td>
+                    <label for="product">Product</label>
+                </td>
+                <td>
+                    <input type="text" id="product"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="quantity">Quantity</label>
+                </td>
+                <td>
+                    <input type="number" id="quantity"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="price">Price</label>
+                </td>
+                <td>
+                    <input type="number" id="price"/>
+                </td>
+            </tr>
+            <td colspan="3">
+                <center>
+                <button onclick="addItem()">Add Item</button>
+                </center>
+            </td>
+        </table>
+        </section>
+
+        <section>
+        <table id="billTable">
+            <thead>
+                <tr class="spac">
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="billBody"> </tbody>
+        </table>
+        <h2>Total Bill : <span id="totalAmount">0</span></h2>
+        <button onclick="downloadPDF()">Download PDF</button>
+    </section>
+    </center>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="invoice.js"></script>
+</body>
+</html>
