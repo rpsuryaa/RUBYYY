@@ -96,7 +96,7 @@ function downloadPDF() {
         y += 10;
     }
 
-    y += 10; // Add some space before the items table
+    y += 20; // Add some space before the items table
 
     doc.text(`Product`, 10, y);
     doc.text(`Quantity`, 60, y);
